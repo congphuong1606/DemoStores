@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#fff"
+    android:clipToPadding="false"
+    android:paddingTop="?actionBarSize"
+    android:orientation="vertical"
+
+    tools:context="com.example.mypc.stores.ui.main.fragment.editpost.EditPostFragment">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_edit_avatar_post_store"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_noavatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toRightOf="@+id/imv_edit_avatar_post_store"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_edit_store_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="CƠ KHÍ MINH ÁI"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_edit_post_time"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="10:30 sáng"
+                android:textColor="#d6c7c7" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edt_edit_post_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/imv_edit_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

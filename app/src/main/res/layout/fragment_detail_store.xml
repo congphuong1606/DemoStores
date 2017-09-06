@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context=".ui.main.fragment.detailstorefragment.DetailStoreFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/cl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleGravity="bottom"
+            app:expandedTitleMarginBottom="80dp"
+            app:expandedTitleMarginStart="125dp"
+            app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/image_bia"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="100dp"
+                    android:paddingLeft="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imv_detail_avatar_store"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/banner" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/imv_detail_avatar_store"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="80dp"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:paddingRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <Button
+                                        android:id="@+id/btn_call"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/ic_call" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <Button
+                                        android:id="@+id/btn_email"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:background="@drawable/ic_message" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <Button
+                                        android:id="@+id/btn"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/ic_add_location" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_detail_full_name_store"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="20dp"
+                            android:text="kiến tạo tương lai"
+                            android:textSize="16sp" />
+                        <View
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="80dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffffff" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:background="@drawable/bando"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+
+
+
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_toRightOf="@+id/imv_post_one">
+
+                          <android.support.v7.widget.RecyclerView
+                              android:padding="5dp"
+                              android:id="@+id/rcv_post_store"
+                              android:layout_width="match_parent"
+                              android:layout_height="60dp"
+                              android:layout_alignParentTop="true"
+                              android:layout_alignParentLeft="true"
+                              android:layout_alignParentStart="true">
+
+                          </android.support.v7.widget.RecyclerView>
+                        </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <Button
+                    android:id="@+id/btn_arow_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_arrow_back_black" />
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:overScrollMode="always"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:tabMode="scrollable"
+        app:tabTextColor="@android:color/white">
+
+        <fragment
+            android:id="@+id/store_map_detail"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.mapwithmarker.MapsMarkerActivity">
+
+        </fragment>
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/fb_direct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_directions_black"
+        app:layout_anchor="@+id/app_bar_layout"
+        app:fabSize="mini"
+
+        app:layout_anchorGravity="bottom|right" />
+
+
+</android.support.design.widget.CoordinatorLayout>

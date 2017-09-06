@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".ui.register.RegisActivity">
+
+    <LinearLayout
+
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imglogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_store" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edt_input_acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tên tài khoản"
+                android:maxLength="15"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edt_input_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="số diện thoại"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp">
+
+            <EditText
+                android:id="@+id/edt_input_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="mật khẩu"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_weight="1"
+                android:id="@+id/ck_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user" />
+            <CheckBox
+
+                android:layout_weight="1"
+                android:id="@+id/ck_store"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/store" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sigup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Đăng ký"
+            android:textColor="@color/white"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="#2244d9" />
+
+        <Button
+            android:id="@+id/btn_back_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="trở về"
+            android:textAllCaps="false"
+            android:textColor="#2244d9" />
+    </LinearLayout>
+</LinearLayout>

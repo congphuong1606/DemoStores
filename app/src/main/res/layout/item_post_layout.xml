@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_avatar_post_store"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_noavatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/btn_menu"
+            android:layout_toRightOf="@+id/imv_avatar_post_store"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_store_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="CƠ KHÍ MINH ÁI"
+                android:textColor="@color/text_name_acount"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_post_time"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="10:30 sáng"
+                android:textColor="#d6c7c7" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_optionxml"
+            android:gravity="center_vertical"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#abaaaa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_post_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="a\nb" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view_heart_post"
+                android:layout_width="0.1dp"
+                android:layout_height="0.1dp"
+                android:layout_centerInParent="true"
+                android:background="@null">
+
+            </View>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imv_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                app:actualImageScaleType="centerInside"
+                app:fadeDuration="300"
+                app:placeholderImage="@drawable/ic_no_image"
+                app:viewAspectRatio="1" />
+            <!--<me.relex.photodraweeview.PhotoDraweeView-->
+            <!--android:id="@+id/imv_post_image"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:actualImageScaleType="fitCenter"-->
+            <!--app:placeholderImage="@drawable/ic_no_image"-->
+            <!--app:placeholderImageScaleType="fitCenter" />-->
+            <!--<ImageView-->
+            <!--android:id="@+id/imv_post_image"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_post_count_Like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="12 lượt thích"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#abaaaa" />
+
+            <Button
+                android:id="@+id/btn_like_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_like_whitexml"
+                android:drawablePadding="3dp"
+                android:gravity="left|center_vertical"
+                android:paddingRight="5dp"
+                android:text=" like"
+                android:textAllCaps="false"
+                android:textColor="@color/text"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="12 "
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/tv_post_cmt"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="#abaaaa" />
+
+            <Button
+                android:id="@+id/btn_comment_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_commentxml"
+                android:drawablePadding="3dp"
+                android:text="comment"
+                android:textAllCaps="false"
+                android:textColor="@color/text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_post_count_cmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:text="45 bình luận"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#abaaaa" />
+
+            <Button
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_sendxml"
+                android:text="share"
+                android:textAllCaps="false"
+                android:textColor="@color/text" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
